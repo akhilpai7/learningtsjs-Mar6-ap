@@ -4,4 +4,9 @@ export const formatName = function (first: string, last: string, transform?: Tra
     return transform ? transform(response) : response;
 }
 
-export const PI = 3.1415; 
+export const PI = 3.1415;
+
+export function wrap(chars: string): Transform {
+    // closure
+    return (x) => `${chars}${x}${chars}`;
+}
